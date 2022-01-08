@@ -2,6 +2,7 @@
 ignoreCase = false
 autocrlf = true
     pager = less -+$LESS -FRX 
+	eol = lf
 [user]
 name = Lukas Neverauskis
 email = l.neverauskis@nanoavionics.com
