@@ -1,0 +1,24 @@
+[alias]
+	me = config --global user.name
+	lme = ll --author=\"lukasnee\"
+	s = status
+	l = log --pretty=format:'%C(cyan)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(yellow)%s'
+	ll = log --pretty=format:'%C(cyan)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(yellow)%s %C(white)%b %C(red)%N'
+	lg = l --graph
+	llg = ll --graph
+	unstage = restore --staged
+	cm = commit -m
+	ca = commit --amend
+	cane = ca --no-edit
+	co = checkout
+	cob = co -b
+	ds = diff --stat
+	ss = show --stat
+	fa = fetch --all
+	rc = rebase --continue
+	checkrec = checkout --recurse-submodules
+[core]
+	autocrlf = true
+[user]
+	email = lukas.neverauskis@gmail.com
+	name = lukasnee
