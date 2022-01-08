@@ -1,0 +1,80 @@
+{
+    [
+        {
+            "key": "ctrl+alt+`",
+            "command": "workbench.action.focusActiveEditorGroup"
+        },
+        {
+            "key": "ctrl+k e",
+            "command": "workbench.explorer.fileView.focus"
+        },
+        {
+            "key": "ctrl+shift+alt+b",
+            "command": "workbench.action.tasks.test"
+        },
+        {
+            "key": "shift+space i",
+            "command": "editor.action.indentationToSpaces"
+        },
+        {
+            "key": "shift+space s",
+            "command": "git.stageSelectedRanges",
+            "when": "isInDiffEditor"
+        },
+        {
+            "key": "shift+space u",
+            "command": "git.unstageSelectedRanges",
+            "when": "isInDiffEditor"
+        },
+        {
+            "key": "shift+space p",
+            "command": "workbench.action.problems.focus"
+        },
+        {
+            "key": "shift+space t",
+            "command": "workbench.action.toggleMaximizedPanel"
+        },
+        {
+            "key": "shift+space b",
+            "command": "workbench.action.tasks.runTask",
+            "args": "Build All (Release)"
+        },
+        {
+            "key": "alt+k",
+            "command": "workbench.action.terminal.resizePaneUp"
+        },
+        {
+            "key": "alt+j",
+            "command": "workbench.action.terminal.resizePaneDown"
+        },
+        {
+            "key": "alt+h",
+            "command": "workbench.action.terminal.resizePaneLeft"
+        },
+        {
+            "key": "alt+l",
+            "command": "workbench.action.terminal.resizePaneRight"
+        },
+        // User/tasks.json
+        {
+            "key": "shift+space g",
+            "command": "workbench.action.tasks.runTask",
+            "args": "Open Git Bash in terminal view 1"
+        },
+        {
+            "key": "shift+space 1",
+            "command": "workbench.action.tasks.runTask",
+            "args": "Open Git Bash in terminal view 1"
+        },
+        {
+            "key": "shift+space 2",
+            "command": "workbench.action.tasks.runTask",
+            "args": "Open Git Bash in terminal view 2"
+        },
+        {
+            "key": "shift+space 3",
+            "command": "workbench.action.tasks.runTask",
+            "args": "Open Git Bash in terminal view 3"
+        }
+    ]
+}
