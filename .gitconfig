@@ -1,24 +1,41 @@
-[alias]
-	me = config --global user.name
-	lme = ll --author=\"lukasnee\"
-	s = status
-	l = log --pretty=format:'%C(cyan)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(yellow)%s'
-	ll = log --pretty=format:'%C(cyan)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(yellow)%s %C(white)%b %C(red)%N'
-	lg = l --graph
-	llg = ll --graph
-	unstage = restore --staged
-	cm = commit -m
-	ca = commit --amend
-	cane = ca --no-edit
-	co = checkout
-	cob = co -b
-	ds = diff --stat
-	ss = show --stat
-	fa = fetch --all
-	rc = rebase --continue
-	checkrec = checkout --recurse-submodules
 [core]
-	autocrlf = true
+ignoreCase = false
+autocrlf = true
+    pager = less -+$LESS -FRX 
 [user]
-	email = lukas.neverauskis@gmail.com
-	name = lukasnee
+name = Lukas Neverauskis
+email = l.neverauskis@nanoavionics.com
+[credential "https://bitbucket.org"]
+username = lukasnee
+[credential]
+    helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
+[alias]
+    s = status
+    l = log --pretty=format:'%C(yellow)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(cyan)%s' 
+    ll = log --pretty=format:'%C(yellow)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(cyan)%s %C(white)%b %C(red)%N'
+    lg = l --graph
+    llg = ll --graph
+    lme = l --author=\"lukasnee\"
+    unstage = restore --staged
+    ca = commit --amend
+    cane = ca --no-edit
+    suri = submodule update --recursive --init
+    cm = commit -m
+    fa = fetch --all
+    me = config --global user.name
+    ds = diff --stat
+    ss = show --stat
+    co = checkout
+    cob = co -b
+    rc = rebase --continue
+    checkrec = checkout --recurse-submodules
+    l5 = l -5
+    lg5 = lg -5
+    lghom = lg HEAD origin/master
+        # ATTENTION: All aliases prefixed with ! run in /bin/sh make sure you use sh syntax, not bash/zsh or whatever
+        rb = "!r() { refbranch=$1 count=$2; git for-each-ref --sort=-committerdate refs --format='%(refname:short)|%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:-20} | while read line; do branch=$(echo \"$line\" | awk 'BEGIN { FS = \"|\" }; { print $1 }' | tr -d '*'); ahead=$(git rev-list --count \"${refbranch:-origin/master}..${branch}\"); behind=$(git rev-list --count \"${branch}..${refbranch:-origin/master}\"); colorline=$(echo \"$line\" | sed 's/^[^|]*|//'); echo \"$ahead|$behind|$colorline\" | awk -F'|' -vOFS='|' '{$5=substr($5,1,70)}1' ; done | ( echo \"ahead|behind||branch|lastcommit|message|author\\n\" && cat) | column -ts'|';}; r"
+[filter "lfs"] # sure?
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
