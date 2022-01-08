@@ -39,14 +39,14 @@
     "workbench.iconTheme": "vscode-icons",
     "editor.fontFamily": "Roboto Mono",
     "editor.fontWeight": "500",
-    "editor.fontSize": 15,
+    "editor.fontSize": 18,
     "editor.rulers": [
         80,
         128
     ],
     "editor.renderWhitespace": "all",
     "editor.detectIndentation": false,
-    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingOvertype": "never", //  "auto"?
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
     "editor.autoClosingBrackets": "never",
@@ -58,6 +58,12 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[cmake]": {
+        "editor.defaultFormatter": "cheshirekow.cmake-format"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "tht13.python"
     },
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -114,4 +120,8 @@
     "git.autoRepositoryDetection": "openEditors",
     "diffEditor.maxComputationTime": 0,
     "window.zoomLevel": -1,
+    "prettier.printWidth": 120,
+    "prettier.proseWrap": "always",
+    "prettier.tabWidth": 4,
+    "cmake.configureOnEdit": false,
 }
