@@ -1,6 +1,6 @@
 [core]
 ignoreCase = false
-autocrlf = true
+autocrlf = false
     pager = less -+$LESS -FRX 
 	eol = lf
 [user]
