@@ -120,4 +120,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias dotfiles='/usr/bin/git --git-dir=/home/lukasnee/.dotfiles/ --work-tree=/home/lukasnee'
+alias dotfiles='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
