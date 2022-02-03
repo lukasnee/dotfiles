@@ -1,8 +1,9 @@
 [core]
 ignoreCase = false
-autocrlf = false
+autocrlf = true
     pager = less -+$LESS -FRX 
 	eol = lf
+	editor = vim
 [user]
 name = Lukas Neverauskis
 email = l.neverauskis@nanoavionics.com

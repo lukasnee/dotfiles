@@ -1,19 +1,40 @@
 [
-    // Terminal:
     {
-        "key": "shift+space 1",
+        "key": "shift+space b",
         "command": "workbench.action.tasks.runTask",
-        "args": "Open WSL in Terminal 1"
+        "args": "Build application project"
     },
     {
-        "key": "shift+space 2",
+        "key": "shift+space e",
         "command": "workbench.action.tasks.runTask",
-        "args": "Open WSL in Terminal 2"
+        "args": "Build extension project"
     },
     {
-        "key": "shift+space 3",
+        "key": "shift+space f",
         "command": "workbench.action.tasks.runTask",
-        "args": "Open WSL in Terminal 3"
+        "args": "Download application to flash"
+    },
+    {
+        "key": "shift+space `",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "shift+space s",
+        "command": "git.stageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+space u",
+        "command": "git.unstageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+space m",
+        "command": "editor.action.toggleMinimap"
+    },
+    {
+        "key": "shift+space t",
+        "command": "workbench.action.tasks.test"
     },
     {
         "key": "alt+k",
@@ -32,41 +53,7 @@
         "command": "workbench.action.terminal.resizePaneRight"
     },
     {
-        "key": "shift+space `",
-        "command": "workbench.action.toggleMaximizedPanel"
-    },
-    // Build & Test:
-    {
-        "key": "shift+space t",
-        "command": "workbench.action.tasks.test"
-    },
-    {
         "key": "ctrl+k e",
         "command": "workbench.explorer.fileView.focus"
     },
-    {
-        "key": "ctrl+alt+`",
-        "command": "workbench.action.focusActiveEditorGroup"
-    },
-    // Git:
-    {
-        "key": "shift+space s",
-        "command": "git.stageSelectedRanges",
-        "when": "isInDiffEditor"
-    },
-    {
-        "key": "ctrl+k ctrl+alt+s",
-        "command": "-git.stageSelectedRanges",
-        "when": "isInDiffEditor"
-    },
-    {
-        "key": "shift+space u",
-        "command": "git.unstageSelectedRanges",
-        "when": "isInDiffEditor"
-    },
-    {
-        "key": "ctrl+k ctrl+n",
-        "command": "-git.unstageSelectedRanges",
-        "when": "isInDiffEditor"
-    }
 ]
