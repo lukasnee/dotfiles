@@ -1,5 +1,6 @@
 {
-    "customizeUI.stylesheet": { // dependencies: Monkey Patch
+    // BASE SETTINGS (https://github.com/lukasnee/dotfiles)
+    "customizeUI.stylesheet": { 
         ".quick-input-widget": "width: 1000px !important; left: calc(50% - 200px);"
     },
     "workbench.colorCustomizations": {
@@ -32,7 +33,6 @@
     "task.problemMatchers.neverPrompt": {
         "shell": true
     },
-    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIjAwMDBGRlwiLFwiRkYwMDAwXCJdLFwiZm9ybWF0V2lkdGhcIjoyNDAsXCJjcmVhdGVUYXJnZXRcIjpmYWxzZSxcInBhZ2VGb3JtYXRcIjp7XCJ4XCI6MCxcInlcIjowLFwid2lkdGhcIjo4NTAsXCJoZWlnaHRcIjoxMTAwfSxcInNlYXJjaFwiOnRydWUsXCJzaG93U3RhcnRTY3JlZW5cIjp0cnVlLFwiZ3JpZENvbG9yXCI6XCIjZDBkMGQwXCIsXCJkYXJrR3JpZENvbG9yXCI6XCIjNmU2ZTZlXCIsXCJhdXRvc2F2ZVwiOnRydWUsXCJyZXNpemVJbWFnZXNcIjpudWxsLFwib3BlbkNvdW50ZXJcIjowLFwidmVyc2lvblwiOjE4LFwidW5pdFwiOjEsXCJpc1J1bGVyT25cIjp0cnVlLFwidWlcIjpcIlwifSJ9",
     "hediet.vscode-drawio.theme": "Kennedy",
     "git.confirmSync": false,
     "workbench.colorTheme": "Atom One Dark",
@@ -46,11 +46,11 @@
     ],
     "editor.renderWhitespace": "all",
     "editor.detectIndentation": false,
-    "editor.autoClosingOvertype": "never", //  "auto"?
+    "explorer.confirmDragAndDrop": false,
+    "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
     "editor.autoClosingBrackets": "never",
-    "explorer.confirmDragAndDrop": false,
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontWeight": 500,
     "[jsonc]": {
@@ -58,12 +58,6 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[cmake]": {
-        "editor.defaultFormatter": "cheshirekow.cmake-format"
-    },
-    "[python]": {
-        "editor.defaultFormatter": "tht13.python"
     },
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -73,22 +67,21 @@
     },
     "[cpp]": {
         "editor.defaultFormatter": "xaver.clang-format",
-        "editor.formatOnSaveMode": "modifications",
-        // "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "modifications"
     },
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format",
-        "editor.formatOnSaveMode": "modifications",
-        // "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "modifications"
     },
     "[rst]": {
         "editor.defaultFormatter": "tht13.rst-vscode",
-        "editor.formatOnSaveMode": "modifications",
-        // "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "modifications"
     },
+    "languageTool.language": "en",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook",
         "*.raw": "hexEditor.hexedit",
+        "*.bin": "hexEditor.hexedit"
     },
     "explorer.confirmDelete": false,
     "redhat.telemetry.enabled": true,
@@ -101,14 +94,8 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.linux": "bash", 
     "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "terminal.integrated.profiles.windows": {
-        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe (migrated)": {
-            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-            "args": []
-        }
-    },
     "editor.largeFileOptimizations": false,
     "cmake.configureOnOpen": true,
     "editor.suggestSelection": "first",
@@ -119,9 +106,21 @@
     "git.detectSubmodules": false,
     "git.autoRepositoryDetection": "openEditors",
     "diffEditor.maxComputationTime": 0,
+    "editor.bracketPairColorization.enabled": true,
+    "python.formatting.provider": "yapf",
+    "editor.minimap.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "xml.symbols.maxItemsComputed": 20000,
     "window.zoomLevel": -1,
     "prettier.printWidth": 120,
     "prettier.proseWrap": "always",
     "prettier.tabWidth": 4,
     "cmake.configureOnEdit": false,
+    "timeline.excludeSources": [
+        "git-history"
+    ],
+   
+    // THIS MACHINE SPECIFIC SETTINGS: 
+    
 }
