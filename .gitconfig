@@ -13,8 +13,13 @@ username = lukasnee
 [alias]
     s = status
     l = log --pretty=format:'%C(yellow)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(cyan)%s' 
-    ll = log --pretty=format:'%C(yellow)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(cyan)%s %C(white)%b %C(red)%N'
+    la = l --all
+    l5 = l -5
     lg = l --graph
+    lg5 = lg -5
+    lga = lg --all
+    ll = log --pretty=format:'%C(yellow)%h %C(blue)%as%<(9,trunc) %C(magenta)%cL %C(auto)%d %C(cyan)%s %C(white)%b %C(red)%N'
+    lla = ll --all
     llg = ll --graph
     lme = l --author=\"lukasnee\"
     unstage = restore --staged
@@ -23,6 +28,7 @@ username = lukasnee
     suri = submodule update --recursive --init
     cm = commit -m
     fa = fetch --all
+    fap = fetch --all --prune
     me = config --global user.name
     ds = diff --stat
     ss = show --stat
@@ -30,14 +36,14 @@ username = lukasnee
     cob = co -b
     rc = rebase --continue
     checkrec = checkout --recurse-submodules
-    l5 = l -5
-    lg5 = lg -5
     lghom = lg HEAD origin/master
-        # ATTENTION: All aliases prefixed with ! run in /bin/sh make sure you use sh syntax, not bash/zsh or whatever
-        rb = "!r() { refbranch=$1 count=$2; git for-each-ref --sort=-committerdate refs --format='%(refname:short)|%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:-20} | while read line; do branch=$(echo \"$line\" | awk 'BEGIN { FS = \"|\" }; { print $1 }' | tr -d '*'); ahead=$(git rev-list --count \"${refbranch:-origin/master}..${branch}\"); behind=$(git rev-list --count \"${branch}..${refbranch:-origin/master}\"); colorline=$(echo \"$line\" | sed 's/^[^|]*|//'); echo \"$ahead|$behind|$colorline\" | awk -F'|' -vOFS='|' '{$5=substr($5,1,70)}1' ; done | ( echo \"ahead|behind||branch|lastcommit|message|author\\n\" && cat) | column -ts'|';}; r"
+    lghod = lg HEAD origin/develop
     brc = branch -r --sort=-committerdate
     bc = branch --sort=-committerdate
     mc = merge --continue
+    branches = for-each-ref --sort=-committerdate --format='%(color:yellow)%(objectname:short) %(color:blue)%(committerdate:format:%Y-%m-%d) %(color:magenta)%(authorname) %(color:cyan)%(refname:short)' refs/heads
+        # ATTENTION: All aliases prefixed with ! run in /bin/sh make sure you use sh syntax, not bash/zsh or whatever
+    rb = "!r() { refbranch=$1 count=$2; git for-each-ref --sort=-committerdate refs --format='%(refname:short)|%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:-20} | while read line; do branch=$(echo \"$line\" | awk 'BEGIN { FS = \"|\" }; { print $1 }' | tr -d '*'); ahead=$(git rev-list --count \"${refbranch:-origin/master}..${branch}\"); behind=$(git rev-list --count \"${branch}..${refbranch:-origin/master}\"); colorline=$(echo \"$line\" | sed 's/^[^|]*|//'); echo \"$ahead|$behind|$colorline\" | awk -F'|' -vOFS='|' '{$5=substr($5,1,70)}1' ; done | ( echo \"ahead|behind||branch|lastcommit|message|author\\n\" && cat) | column -ts'|';}; r"
 [filter "lfs"] # sure?
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
