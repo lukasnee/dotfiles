@@ -121,3 +121,9 @@ if ! shopt -oq posix; then
 fi
 
 alias dotfiles='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
+export PATH="$PATH:$HOME/squashfs-root/usr/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$PATH:$HOME/.nvm/versions/node/v20.5.0/bin"
