@@ -24,6 +24,7 @@ username = lukasnee
     lme = l --author=\"lukasnee\"
     unstage = restore --staged
     ca = commit --amend
+    cf = commit --fixup
     cane = ca --no-edit
     suri = submodule update --recursive --init
     cm = commit -m
@@ -35,6 +36,7 @@ username = lukasnee
     co = checkout
     cob = co -b
     rc = rebase --continue
+    rias = rebase --interactive --autosquash 
     checkrec = checkout --recurse-submodules
     lghom = lg HEAD origin/master
     lghod = lg HEAD origin/develop
