@@ -1,6 +1,6 @@
 [core]
 ignoreCase = false
-autocrlf = true
+autocrlf = input
     pager = less -+$LESS -FRX 
 	eol = lf
 	editor = vim
