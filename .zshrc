@@ -106,3 +106,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=/home/lukasnee/.dotfiles/ --work-tree=/home/lukasnee'
+export PATH=$PATH:/opt/gcc-arm-none-eabi/bin/
