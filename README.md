@@ -12,6 +12,7 @@
 For bash and zsh:
 
 ```zsh
+cd ~
 curl -Lks https://raw.githubusercontent.com/lukasnee/dotfiles/main/.bin/install.sh | /bin/bash
 ```
 
